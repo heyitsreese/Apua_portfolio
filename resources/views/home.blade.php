@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+@extends('layouts.content')
+
+@section('title', 'Home')
+
+@section('content')
+<h1>Welcome to my Portfolio</h1>
+<p>This is my portfolio</p>
+@endsection
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,4 +18,4 @@
 <body>
 <h1>Welcome to my Portfolio</h1>
 </body>
-</html>
+</html> -->
