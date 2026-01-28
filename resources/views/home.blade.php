@@ -3,19 +3,23 @@
 @section('title', 'Home')
 
 @section('content')
-<h1>Welcome to my Portfolio</h1>
-<p>This is my portfolio</p>
+<div class="container mt-4">
+    <h2>My Skills</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Skill</th>
+                <th>LeveL</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($skills as $skill)
+            <tr>
+                <td>{{$skill->skill}}</td>
+                <td>{{$skill->level}}</td>
+            </tr>
+            @endforeach
+</tdbody>
+</table>
+</div>
 @endsection
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apua's Portfolio</title>
-</head>
-<body>
-<h1>Welcome to my Portfolio</h1>
-</body>
-</html> -->
