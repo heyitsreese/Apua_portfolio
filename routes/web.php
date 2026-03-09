@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SkillController;
+use App\Http\Controllers\PortfolioController;
 
-Route::get('/', [SkillController::class, 'index']);
+Route::get('/', [PortfolioController::class, 'home']);
 
 Route::get('/about', function () {
     return view('about');
@@ -13,6 +14,11 @@ Route::get('/projects', function () {
     return view('projects');
 });
 
-Route::get('/contacts', function () {
-    return view('contacts');
-});
+Route::get('/skills', [SkillController::class, 'index']);
+
+Route::get('/projects', [PortfolioController::class, 'projects']);
+
+Route::get('/experience', [PortfolioController::class, 'experience']);
+
+
+Route::get('/contact', [PortfolioController::class, 'contact']);

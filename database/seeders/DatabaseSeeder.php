@@ -15,11 +15,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call(SkillsTableSeeder::class);
-        /** IF MULTIPLE SEEDER
-         * $this->call([
-         * SkillsTableSeeder::class,
-         * ]);
-         */
+        $this->call([
+            SkillsTableSeeder::class,
+            ProfileSeeder::class,
+            ContactSeeder::class,
+            ExperienceSeeder::class,
+            ProjectSeeder::class,
+            ]);
     }
 }

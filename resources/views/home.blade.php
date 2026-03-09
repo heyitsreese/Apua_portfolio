@@ -1,25 +1,44 @@
 @extends('layouts.content')
 
-@section('title', 'Home')
-
 @section('content')
-<div class="container mt-4">
-    <h2>My Skills</h2>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Skill</th>
-                <th>LeveL</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($skills as $skill)
-            <tr>
-                <td>{{$skill->skill}}</td>
-                <td>{{$skill->level}}</td>
-            </tr>
-            @endforeach
-</tdbody>
-</table>
+
+<div class="hero-wrapper p-5 shadow-sm">
+
+    <div class="row align-items-center">
+
+        <div class="col-md-6 text-center text-md-start">
+            <h1 class="display-4 fw-bold">
+                {{ $profile->name }}
+            </h1>
+
+            <h5 class="text-white mt-3">
+                {{ $profile->title }}
+            </h5>
+
+            <p class="mt-4 text-light">
+                {{ $profile->bio }}
+            </p>
+
+            <div class="mt-4">
+                <a href="/projects" class="btn btn-light btn-lg me-3 px-4">
+                    View Projects
+                </a>
+
+                <a href="/contact" class="btn btn-outline-light btn-lg px-4">
+                    Contact
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-6 text-center mt-5 mt-md-0">
+            <img src="{{ asset('images/profile.jpg') }}"
+                 class="img-fluid rounded-4 shadow-sm"
+                 style="max-width: 380px;"
+                 alt="Profile Image">
+        </div>
+
+    </div>
+
 </div>
+
 @endsection
