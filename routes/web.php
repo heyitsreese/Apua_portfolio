@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\PortfolioController;
 
-Route::get('/', [PortfolioController::class, 'home']);
+Route::get('/', [PortfolioController::class, 'home'])->middleware('portfolio');
 
 Route::get('/about', function () {
     return view('about');
