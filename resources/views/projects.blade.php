@@ -1,5 +1,7 @@
 @extends('layouts.content')
 
+@section('title', 'Project')
+
 @section('content')
 
 <h2 class="mb-5 text-center fw-bold text-white">Projects</h2>
@@ -118,3 +120,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </script>
 @endsection
+
+<!-- @extends('layouts.content')
+
+@section('title', 'Projects')
+
+@section('content')
+
+<div class="container mt-4">
+    <h1 class="mb-3">Projects</h1>
+
+    <a href="{{ route('projects.create') }}" class="btn btn-primary mb-3">Add New Project</a>
+
+    @if(session('success'))
+        <div class="alert alert-success">{{ session('success') }}</div>
+    @endif
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Tech Stack</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($projects as $project)
+                <tr>
+                    <td>{{ $project->title }}</td>
+                    <td>{{ $project->description }}</td>
+                    <td>{{ $project->tech_stack }}</td>
+                    <td>
+                        <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-warning">
+                            Edit
+                        </a>
+                    </td>
+                </tr>
+                @endforeach
+        </tbody>
+    </table>
+</div>
+
+@endsection -->
